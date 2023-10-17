@@ -1,7 +1,9 @@
 const fs= require("fs");
+// import path package
 const path = require('path');
-
+//import uniqid package
 var uniqid = require('uniqid')
+// api route 
 module.exports= (app)=> {
     app.get('/api/notes', (req, res) =>{
         res.sendFile(path.join(__dirname, '../db/db.json'))
